@@ -9,8 +9,9 @@ int main()
                      { 2, {3, 4} },
                      { 3, {4, 5} } } );
 
-    graph.traversal_inDepth(2);
-    graph.print();
+    graph.traversal_in_depth(2);
+    std::cout << std::endl << std::endl;
+    graph.traversal_in_breadth(0);
 
     return 0;
 }
