@@ -30,7 +30,7 @@ template<typename T>
 Graph<T>::Graph(std::unordered_map<T, std::list<T>> const& data) { m_data = data; }
 
 template<typename T>
-void Graph<T>::addEdge(T key, std::list<T> const& node) { m_data.at(key).push_back(node); }
+void Graph<T>::addEdge(T key, std::list<T> const& node) { m_data.insert(m_data.end(), std::pair<T, std::list<T>>(key, node)); }
 
 template<typename T>
 void Graph<T>::print() const
